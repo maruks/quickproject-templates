@@ -7,7 +7,7 @@ Common Lisp code generation tool.
 	make
 
 ### Usage
-    clg <project-name> [<directory>] [-t <template>]
+    cl-new <project-name> [<directory>] [-t <template>]
 
 ### Templates
 

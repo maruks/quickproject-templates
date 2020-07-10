@@ -62,7 +62,7 @@
 	  (if (directory-exists-p directory)
 	      (format t "directory ~s exists~%" (namestring directory))
 	      (make name directory :template (or template *default-template*))))
-	(format t "usage: clg <name> [<directory>] [-t <template>]~%"))))
+	(format t "usage: cl-new <name> [<directory>] [-t <template>]~%"))))
 
 (defun main ()
   (call-with-fatal-condition-handler #'run))
