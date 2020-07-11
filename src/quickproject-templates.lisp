@@ -1,9 +1,9 @@
 (defpackage :quickproject-templates
-  (:use cl cl-fad quickproject)
-  (:import-from :uiop :command-line-arguments :call-with-fatal-condition-handler)
-  (:export :main))
+  (:use #:cl #:cl-fad #:quickproject)
+  (:import-from #:uiop #:command-line-arguments #:call-with-fatal-condition-handler)
+  (:export #:main))
 
-(in-package :quickproject-templates)
+(in-package #:quickproject-templates)
 
 (defparameter *templates* (asdf/system:system-relative-pathname :quickproject-templates "templates/"))
 
