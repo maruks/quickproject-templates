@@ -11,8 +11,10 @@
 
 (defparameter *options* '(("-t" . :template)))
 
-(defun template-directory (template-name)
-  (merge-pathnames-as-directory *templates* (pathname-as-directory template-name)))
+(defun template-directory (template-name-or-pathname)
+  (if (directory-exists-p template-name-or-pathname)
+      template-name-or-pathname
+      (merge-pathnames-as-directory *templates* (pathname-as-directory template-name-or-pathname))))
 
 (defun replace-first (string part replacement)
   (let ((pos (search part string :test #'char=)))
